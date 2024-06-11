@@ -45,3 +45,7 @@ group by full_name;
 
 #using average
 select avg(stock_quantity) from books;
+
+## movre calculation in this field
+select released_year,avg(stock_quantity) as average_sales,count(*) as number_of_books from books
+group by released_year;
