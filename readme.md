@@ -1,4 +1,4 @@
-# my recored journey in sql 
+# my recorded journey in sql 
 
 i am going to record all the stuff am doing on sql.
 
