@@ -58,3 +58,23 @@ select title from books where
  
  #now lets make it scalable
  select title,released_year from books where released_year%2 !=0;
+ 
+ select title,released_year,
+ case when released_year>= 2006 then 'modern genre'
+ else '20th century lit' 
+ end as genre
+ from books;
+ 
+ select title,stock_quantity,
+	 case when stock_quantity <=50 then '*'
+	  when stock_quantity<=100 then '**'
+	  else '***'
+  end as start_count
+  from books;
+ 
+ desc books;
+ 
+#show deleting ops 
+delete from books where author_fname is null;
+
+select * from books where author_fname is null;
