@@ -68,3 +68,33 @@ select birthdate,date_add(birthdate,interval 18 year) as the_date from people;
 
 #lets check out the data time manipulation going on
 select timediff(curtime(),birthtime) from people;
+
+#lets do the operatios again with out using functions
+select birthdate,year(birthdate+interval 21 year) from people;
+
+select birthdate,year(birthdate+interval 21 year) as will_be_21 from people;
+
+#timestamp
+create table captions(
+		name varchar(25),
+        created_at timestamp default current_timestamp
+        );
+desc captions;
+
+insert into captions(name) values('willo');
+
+
+create table captions2(
+	text varchar(25),
+    created_at  timestamp default current_timestamp,
+    update_at timestamp on update current_timestamp
+    );
+
+#drop table captions2;
+    
+insert into captions2(text) values('telegram vibin');
+select * from captions2;
+
+#lets update the values now
+
+update captions2 set text="anime watchin";
