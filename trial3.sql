@@ -1,3 +1,4 @@
+
 	 insert into shirts(article,color,shirt_size,last_worn)
 	 values('t-shirt','white','S',100),
 	 ("t-shirt","white","S",200), 
