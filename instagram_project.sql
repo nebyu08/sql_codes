@@ -5,7 +5,7 @@ use ig_clone;
 create table users(
 	id int primary key auto_increment,
     username varchar(255) not null unique ,
-    created_data timestamp default now()
+    created_at timestamp default now()
     );
     
 create table photos(
@@ -53,7 +53,8 @@ CREATE TABLE tags (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
-create table photo_tags(photo_id int not null,
+create table photo_tags(
+photo_id int not null,
 tag_id int not null,
 foreign key (photo_id) references photos(id),
  foreign key (tag_id) references tags(id),
