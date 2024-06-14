@@ -68,3 +68,13 @@ LEFT JOIN
 GROUP BY 
     first_name, last_name;
 desc reviews;
+
+#lets add multiple joins;
+SELECT 
+    first_name, last_name, title, rating
+FROM
+    reviewers
+        JOIN
+    reviews ON reviews.reviewer_id = reviewers.id
+        JOIN
+    series ON reviews.series_id = series.id;
